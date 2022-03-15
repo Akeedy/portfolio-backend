@@ -1,8 +1,183 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    Layout=null;
 }
+<!DOCTYPE html>
+<html lang="en">
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
-</div>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div class="container bg-1">
+        <header>
+            <nav>
+                <ul class="navlist">
+                    <li class="home">Home</li>
+                    <li class="nav-item">About</li>
+                    <li class="nav-item">Skills</li>
+                    <li class="nav-item">Contact</li>
+                </ul>
+            </nav>
+        </header>
+        <div class="title">
+            <div class="name">M.Mazlum Orhan</div>
+            <div class="position">Engineer & Junior Back-end Developer</div>
+            <div class="social-contact">
+                <a href="https://github.com/Akeedy"><img src="./Assets/icons/github.png" alt=""></a>
+                <a href="https://www.linkedin.com/in/muhammed-mazlum-orhan-946537213/"><img
+                        src="./Assets/icons/linkedin.png" alt=""></a>
+                <a href="https://www.instagram.com/mmazlumorhan/"><img src="./Assets/icons/instagram.png" alt=""></a>
+            </div>
+        </div>
+    </div>
+    <div class="container bg-2 content">
+        <div class="left-side">
+            <img src="./Assets/image1.png" alt="">
+        </div>
+        <div class="right-side">
+            <p class="text-title">About Me</p>
+            <p class="text">Sint enim labore magna voluptate ex voluptate ipsum quis amet. Occaecat reprehenderit veniam
+                voluptate
+                enim ullamco. Ad est laborum anim cillum eiusmod incididunt ut aute fugiat proident Lorem laboris
+                consectetur aliqua.</p>
+        </div>
+    </div>
+
+    <div class="container bg-3 content">
+        <div class="left-side">
+            <p class="text-title">Skills</p>
+            <p class="text">Sint enim labore magna voluptate ex voluptate ipsum quis amet. Occaecat reprehenderit veniam
+                voluptate
+                enim ullamco. Ad est laborum anim cillum eiusmod incididunt ut aute fugiat proident Lorem laboris
+                consectetur aliqua.</p>
+            <div class="skills">
+                <div class="skill-item">
+                    <img src="./Assets/progress/p95.png" alt="">
+                    <p>.Net Core</p>
+                </div>
+                <div class="skill-item">
+                    <img src="./Assets/progress/p85.png" alt="">
+                    <p>HTML/CSS</p>
+                </div>
+                <div class="skill-item">
+                    <img src="./Assets/progress/p80.png" alt="">
+                    <p>Java</p>
+                </div>
+                <div class="skill-item">
+                    <img src="./Assets/progress/p80.png" alt="">
+                    <p>Java</p>
+                </div>
+            </div>
+            <div class="skills">
+                <div class="skill-item">
+                    <img src="./Assets/progress/p95.png" alt="">
+                    <p>.Net Core</p>
+                </div>
+                <div class="skill-item">
+                    <img src="./Assets/progress/p95.png" alt="">
+                    <p>.Net Core</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="right-side">
+            <img src="./Assets/image2.png" alt="">
+        </div>
+    </div>
+
+    <div class="container project-container">
+        <div class="big-title">My Projects</div>
+        <div class="projects">
+            <div class="project-item">
+                <div class="image-container"><img src="./Assets/image1.png" alt=""></div>
+                <span class="project-title">Project 1</span>
+                <p class="project-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos accusantium
+                    enim, non quibusdam,
+                    voluptas excepturi atque placeat repudiandae debitis illo molestias quis minima consequuntur esse
+                    sapiente! Eum repudiandae sed ipsam!</p>
+                <a href="" class="project-contact">
+                    <img src="./Assets/icons/github.png" alt="">
+                    Source Code</a>
+            </div>
+
+            <div class="project-item">
+                <div class="image-container"><img src="./Assets/image3.png" alt=""></div>
+                <span class="project-title">Project 1</span>
+                <p class="project-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos accusantium
+                    enim, non quibusdam,
+                    voluptas excepturi atque placeat repudiandae debitis illo molestias quis minima consequuntur esse
+                    sapiente! Eum repudiandae sed ipsam!</p>
+                <a href="" class="project-contact">
+                    <img src="./Assets/icons/github.png" alt="">
+                    Source Code</a>
+            </div>
+
+            <div class="project-item">
+                <div class="image-container"><img src="./Assets/image2.png" alt=""></div>
+                <span class="project-title">Project 1</span>
+                <p class="project-description">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eos accusantium
+                    enim, non quibusdam,
+                    voluptas excepturi atque placeat repudiandae debitis illo molestias quis minima consequuntur esse
+                    sapiente! Eum repudiandae sed ipsam!</p>
+                <a href="" class="project-contact">
+                    <img src="./Assets/icons/github.png" alt="">
+                    Source Code</a>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="footer">
+
+        <div class="contact">
+
+            <div class="contact-form-container">
+
+                <div class="message">
+                    <p>Drop me a line.</p>
+                    <p>I would like to hear from you.</p>
+                </div>
+
+                <div class="form-div">
+
+                    <form class="contact-form" action="post">
+
+                        <span class="text-title">Get In Touch</span>
+                        <div class="form-group">
+                            <input type="text" placeholder="Name" />
+                        </div>
+                        <div class="form-group">
+                            <input type="text" placeholder="Email" />
+                        </div>
+                        <div class="form-group">
+                            <textarea type="text" placeholder="Message"></textarea>
+                        </div>
+                    </form>
+
+                </div>
+            </div>
+
+        </div>
+
+        <div class="footer-social">
+            <div class="footer-bottom">
+                <span class="footer-title">M.Mazlum Orhan</span>
+                <div class="social-contact">
+                    <a href="https://github.com/Akeedy"><img src="./Assets/icons/github.png" alt=""></a>
+                    <a href="https://www.linkedin.com/in/muhammed-mazlum-orhan-946537213/"><img
+                            src="./Assets/icons/linkedin.png" alt=""></a>
+                    <a href="https://www.instagram.com/mmazlumorhan/"><img src="./Assets/icons/instagram.png"
+                            alt=""></a>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
