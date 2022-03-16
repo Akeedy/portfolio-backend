@@ -355,3 +355,7 @@ C:\Users\mazlu\portfolio\portfolio-backend\bin\Debug\net6.0\Microsoft.EntityFram
 C:\Users\mazlu\portfolio\portfolio-backend\bin\Debug\net6.0\Microsoft.EntityFrameworkCore.Relational.dll
 C:\Users\mazlu\portfolio\portfolio-backend\bin\Debug\net6.0\Npgsql.dll
 C:\Users\mazlu\portfolio\portfolio-backend\bin\Debug\net6.0\Npgsql.EntityFrameworkCore.PostgreSQL.dll
+C:\Users\mazlu\portfolio\portfolio-backend\bin\Debug\net6.0\MailKit.dll
+C:\Users\mazlu\portfolio\portfolio-backend\bin\Debug\net6.0\MimeKit.dll
+C:\Users\mazlu\portfolio\portfolio-backend\bin\Debug\net6.0\NETCore.MailKit.dll
+C:\Users\mazlu\portfolio\portfolio-backend\bin\Debug\net6.0\BouncyCastle.Crypto.dll

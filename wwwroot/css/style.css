@@ -262,4 +262,8 @@ input,textarea{
     margin: 1rem  0 0rem 0rem;
 
 }
-
+.reach-me{
+    padding: 2rem;
+    background-color: var(--color-dark-blue);
+    color: white;
+}

@@ -1,4 +1,5 @@
 using Microsoft.EntityFrameworkCore;
+using portfolio_backend.EmailService;
 using portfolio_backend.Models;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -8,6 +9,11 @@ builder.Services.AddControllersWithViews();
 builder.Services.AddDbContext<ApplicationDbContext>(config=>
     config.UseNpgsql("User ID=orhan;Password=12345;Server=localhost;Port=5432;Database=portfolio;Integrated Security=true;Pooling=true;"));
 builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
+
+var EmailConfig=builder.Configuration.GetSection("EmailConfiguration")
+    .Get<EmailConfiguration>();
+builder.Services.AddSingleton(EmailConfig);
+builder.Services.AddScoped<IEmailSender,EmailSender>();
 
 var app = builder.Build();
 

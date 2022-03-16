@@ -1,5 +1,6 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
+using portfolio_backend.EmailService;
 using portfolio_backend.Models;
 
 namespace portfolio_backend.Controllers;
@@ -8,18 +9,28 @@ public class HomeController : Controller
 {
     private readonly ILogger<HomeController> _logger;
     private readonly ApplicationDbContext _dbcontext;
+    private readonly IEmailSender _emailSender;
 
-    public HomeController(ILogger<HomeController> logger, ApplicationDbContext applicationDbContext)
+    public HomeController(ILogger<HomeController> logger, ApplicationDbContext applicationDbContext,IEmailSender emailSender)
     {
         _logger = logger;
         _dbcontext=applicationDbContext;
+        _emailSender=emailSender;
     }
 
     public IActionResult Index()
     {
-        
+    //    var message =new Message(new string[]{"mazlum.1472@gmail.com"},"Test email","This is the content from our email") ;
+    //    _emailSender.SendEmail(message);
         var projects=_dbcontext.Set<Project>().ToList();
         return View(projects);
+    }
+    [HttpPost]
+    public IActionResult SendEmail(GetInTouch getInTouch){
+
+    //    var message =new Message(new string[]{email.To},email.Subject,email.Content) ;
+    //    _emailSender.SendEmail(message);
+        return View();
     }
 
     public IActionResult Privacy()
