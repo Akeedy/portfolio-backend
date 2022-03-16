@@ -1,7 +1,13 @@
+using Microsoft.EntityFrameworkCore;
+using portfolio_backend.Models;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<ApplicationDbContext>(config=>
+    config.UseNpgsql("User ID=orhan;Password=12345;Server=localhost;Port=5432;Database=portfolio;Integrated Security=true;Pooling=true;"));
+builder.Services.AddRazorPages().AddRazorRuntimeCompilation();
 
 var app = builder.Build();
 
@@ -20,8 +26,8 @@ app.UseRouting();
 
 app.UseAuthorization();
 
+
 app.MapControllerRoute(
     name: "default",
     pattern: "{controller=Home}/{action=Index}/{id?}");
-
 app.Run();

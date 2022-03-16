@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\mazlu\\portfolio\\portfolio-backend\\portfolio-backend.csproj": {}
+    "c:\\Users\\mazlu\\portfolio\\portfolio-backend\\portfolio-backend.csproj": {}
   },
   "projects": {
-    "C:\\Users\\mazlu\\portfolio\\portfolio-backend\\portfolio-backend.csproj": {
+    "c:\\Users\\mazlu\\portfolio\\portfolio-backend\\portfolio-backend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\mazlu\\portfolio\\portfolio-backend\\portfolio-backend.csproj",
+        "projectUniqueName": "c:\\Users\\mazlu\\portfolio\\portfolio-backend\\portfolio-backend.csproj",
         "projectName": "portfolio-backend",
-        "projectPath": "C:\\Users\\mazlu\\portfolio\\portfolio-backend\\portfolio-backend.csproj",
+        "projectPath": "c:\\Users\\mazlu\\portfolio\\portfolio-backend\\portfolio-backend.csproj",
         "packagesPath": "C:\\Users\\mazlu\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\mazlu\\portfolio\\portfolio-backend\\obj\\",
+        "outputPath": "c:\\Users\\mazlu\\portfolio\\portfolio-backend\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\mazlu\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -40,7 +40,35 @@
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
+            "../EmailService/EmailService.csproj": {
+              "target": "Package",
+              "version": "(, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
             "Microsoft.AspNetCore.Mvc.Razor.RuntimeCompilation": {
+              "target": "Package",
+              "version": "[6.0.2, )"
+            },
+            "Microsoft.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[6.0.0, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",
               "version": "[6.0.0, )"
             }
@@ -63,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.200\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.201\\RuntimeIdentifierGraph.json"
         }
       }
     }

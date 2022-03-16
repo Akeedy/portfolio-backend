@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "nKLmyvDbpi8qQwo6oWjMhj/VvWcc6Ug5Y/800OPh7y4=",
+  "Hash": "9gZl6X4WsNpuO2n9kbd4BRY0Bkoavc/2dqBEuQDHXGE=",
   "Source": "portfolio-backend",
   "BasePath": "_content/portfolio-backend",
   "Mode": "Default",
@@ -355,6 +355,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Assets\\progress\\p95.png"
+    },
+    {
+      "Identity": "C:\\Users\\mazlu\\portfolio\\portfolio-backend\\wwwroot\\Assets\\projectImage\\blogProject.png",
+      "SourceId": "portfolio-backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mazlu\\portfolio\\portfolio-backend\\wwwroot\\",
+      "BasePath": "_content/portfolio-backend",
+      "RelativePath": "Assets/projectImage/blogProject.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\projectImage\\blogProject.png"
+    },
+    {
+      "Identity": "C:\\Users\\mazlu\\portfolio\\portfolio-backend\\wwwroot\\Assets\\projectImage\\PriceHunter.png",
+      "SourceId": "portfolio-backend",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\mazlu\\portfolio\\portfolio-backend\\wwwroot\\",
+      "BasePath": "_content/portfolio-backend",
+      "RelativePath": "Assets/projectImage/PriceHunter.png",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Assets\\projectImage\\PriceHunter.png"
     },
     {
       "Identity": "C:\\Users\\mazlu\\portfolio\\portfolio-backend\\wwwroot\\Assets\\skills.png",
