@@ -26,7 +26,9 @@ namespace portfolio_backend.EmailService  {
             emailMessage.From.Add(new MailboxAddress(_emailConfiguration.From));
             emailMessage.To.AddRange(message.To);
             emailMessage.Subject=message.Subject;
-            emailMessage.Body=new TextPart(MimeKit.Text.TextFormat.Text){Text=message.Content};
+            emailMessage.Body=new TextPart(MimeKit.Text.TextFormat.Html){
+                Text=String.Format("<h3>{0}</h3></br><p>{1}</p>",message.Subject,message.Content)
+            };
 
             return emailMessage;
 

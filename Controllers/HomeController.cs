@@ -2,7 +2,8 @@
 using Microsoft.AspNetCore.Mvc;
 using portfolio_backend.EmailService;
 using portfolio_backend.Models;
-
+using System.Text.Json;
+using System.Text.Json.Serialization;
 namespace portfolio_backend.Controllers;
 
 public class HomeController : Controller
@@ -27,10 +28,12 @@ public class HomeController : Controller
     }
     [HttpPost]
     public IActionResult SendEmail(GetInTouch getInTouch){
-
-    //    var message =new Message(new string[]{email.To},email.Subject,email.Content) ;
-    //    _emailSender.SendEmail(message);
-        return View();
+      if(!ModelState.IsValid)
+        return Json(false);
+       var message =new Message(new string[]{"mazlum-orhan@outlook.com"},getInTouch.Email+"-"+getInTouch.Name,getInTouch.Content) ;
+       _emailSender.SendEmail(message);
+       var jsonResult=JsonSerializer.Serialize(getInTouch.ToString());
+       return Json(jsonResult); 
     }
 
     public IActionResult Privacy()

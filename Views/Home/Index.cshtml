@@ -10,7 +10,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-   <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <title>Document</title>
 </head>
 
@@ -136,19 +136,22 @@
 
         </div>
         <div class="projects">
-            @if (@Model.Count()>0)
-            @foreach (var item in @Model)
-            {
+            @if (@Model.Count() > 0)
+                @foreach (var item in @Model)
+                {
 
-            <div class="project-item">
-                <div class="image-container"><img src="@item.PathOfImage" alt=""></div>
-                <span class="project-title">@item.Title</span>
-                <p class="project-description">@item.Description</p>
-                <a href="@item.LinkOfSource" class="project-contact">
-                    <img src="./Assets/icons/github.png" alt="">
-                    Source Code</a>
-            </div>
-            }else{
+                    <div class="project-item">
+                        <div class="image-container"><img src="@item.PathOfImage" alt=""></div>
+                        <span class="project-title">@item.Title</span>
+                        <p class="project-description">@item.Description</p>
+                        <a href="@item.LinkOfSource" class="project-contact">
+                            <img src="./Assets/icons/github.png" alt="">
+                            Source Code</a>
+                    </div>
+                }
+
+            else
+            {
                 <p class="text-title">Nothing here for now ... </p>
             }
 
@@ -168,20 +171,21 @@
 
                 <div class="form-div">
 
-                    <form class="contact-form" id ="contact-form"  name = "contact-form">
+                    <form class="contact-form" id="contact-form" name="contact-form">
                         <div class="" asp-validation-summary="ModelOnly"></div>
                         <span class="text-title">Get In Touch</span>
                         <div class="form-group">
                             <input type="text" id="Name" placeholder="Name" />
                         </div>
                         <div class="form-group">
-                            <input type="text" id ="Email" placeholder="Email" />
+                            <input type="text" id="Email" placeholder="Email" />
                         </div>
                         <div class="form-group">
                             <textarea type="text" id="Content" placeholder="Message"></textarea>
                         </div>
-                        <div class="form-group reach-me">
-                            <button type="button" class="reach-me" id="ReachMe" onclick="reachMe()">Reach Me</button>
+                        <div class="form-group">
+                            <button type="button" class="reach-me" id="ReachMe">Reach Me</button>
+                            <p id="warning" class="text-info"></p>
                         </div>
                     </form>
 
@@ -194,7 +198,7 @@
             <div class="footer-bottom">
                 <span class="footer-title">M.Mazlum Orhan</span>
                 <div class="social-contact">
-                    <a href="https://github.com/Akeedy"><img src="./Assets/icons/github.png" alt=""></a>
+                    <a class="social-item" href="https://github.com/Akeedy"><img src="./Assets/icons/github.png" alt=""></a>
                     <a href="https://www.linkedin.com/in/muhammed-mazlum-orhan-946537213/"><img
                             src="./Assets/icons/linkedin.png" alt=""></a>
                     <a href="https://www.instagram.com/mmazlumorhan/"><img src="./Assets/icons/instagram.png"
@@ -208,10 +212,38 @@
 </html>
 
 <script type="text/javascript">
-function reachMe(){
-    console.log($("Email")) 
-    var data=$("contact-form").serialize();
-    alert(data);
-    console.log(data);
-}
+    $("#ReachMe").click(function () {
+
+        var email = $("#Email").val();
+        var name = $("#Name").val();
+        var content = $("#Content").val();
+
+        if (email == "" || name === "" || content == "") {
+            $("#warning").text("Please Fill Fields Correctly");
+        }
+        else {
+            var mail = {
+                "Name": name,
+                "Email": email,
+                "Content": content
+            }
+
+            $.ajax({
+                type: "post",
+                url: "/Home/SendEmail/",
+                data: mail,
+                success: function (data) {
+                    let result = jQuery.parseJSON(data);
+                    $("#warning").text("Thank you for reaching Me, I'll return you right away");
+                }
+
+
+            });
+
+
+
+        }
+
+    });
+
 </script>
