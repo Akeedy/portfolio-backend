@@ -1,8 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;1,300;1,800&display=swap');
 :root {
     font-size: 16px;
     --color-dark-blue: #000C24;
     --color-pink: #F85F73;
     --color-grey: #cccccc;
+    font-family: "Open sans";
 }
 
 body {
@@ -217,6 +219,7 @@ nav {
 }
 
 .project-title {
+    margin-top: 1rem;
     font-weight: bolder;
     font-size: 1.125rem;
 }
@@ -373,7 +376,7 @@ textarea {
     }
 }
 
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 650px) {
     nav {
         width: 100%;
         padding: 1rem 0 1rem 0;
@@ -382,7 +385,6 @@ textarea {
         background-image: none;
         width: 100%;
         height: 2rem;
-        display: none;
     }
     .navlist {
         /* background-color:var(--color-dark-blue); */
@@ -393,17 +395,13 @@ textarea {
         padding: 0;
     }
     .nav-item {
-        display: none;
-        background-color: #F85F73;
         height: 2rem;
         width: 100%;
     }
     .menu-icon {
         display: block;
         width: 2rem;
-        background-color: aqua;
         width: 100%;
-        margin-right: auto;
     }
     .menu-icon img {
         width: 2.25rem;
@@ -412,8 +410,11 @@ textarea {
         padding: 0;
         margin: 0;
         margin-top: 2rem;
+        display: flex;
+        flex-direction: column;
         text-align: center;
         align-items: center;
+        justify-content: center;
     }
     .name {
         font-size: 2.25rem;
@@ -434,7 +435,7 @@ textarea {
         flex-direction: column;
     }
     .message {
-        font-size: 1rem;
+        font-size: 1.25rem;
     }
     .form-div {
         width: 100%;
@@ -443,9 +444,15 @@ textarea {
         font-size: 1.5rem;
     }
     .text-info {
-        font-size: 0.5rem;
+        font-size: 1rem;
     }
     .reach-me {
         padding: .5 rem;
+    }
+    .skills {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
     }
 }
